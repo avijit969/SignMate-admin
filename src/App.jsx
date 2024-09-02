@@ -7,8 +7,9 @@ import {
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import PrivateRoute from './components/PrivateRoute';
-import Admin from './pages/admin';
+
 import { Toaster } from 'react-hot-toast';
+import Admin from './pages/Admin-page';
 const router = createBrowserRouter([
   {
     path: "/",
