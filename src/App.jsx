@@ -10,6 +10,8 @@ import PrivateRoute from './components/PrivateRoute';
 
 import { Toaster } from 'react-hot-toast';
 import Admin from './pages/Admin-page';
+import Add_learning from './pages/Add-learning';
+import AdminPractice from './pages/Add-ques';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUp />,
+  },
+  {
+    path: "/upload-video",
+    element: <Add_learning />,
+  },
+  {
+    path: "/upload-practice-question",
+    element: <AdminPractice />,
   },
 ]);
 function App() {
