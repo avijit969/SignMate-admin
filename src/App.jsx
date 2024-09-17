@@ -10,14 +10,32 @@ import PrivateRoute from './components/PrivateRoute';
 
 import { Toaster } from 'react-hot-toast';
 import Admin from './pages/Admin-page';
-import Add_learning from './pages/Add-learning';
-import AdminPractice from './pages/Add-ques';
+import MainLayout from './components/MainLayout';
+import AddSignVideos from './pages/AddSignVideos';
+import ManageQues from './pages/ManageQues';
 const router = createBrowserRouter([
   {
     path: "/",
     element:
-      <PrivateRoute><Admin /></PrivateRoute>
+
+      <PrivateRoute>
+        <MainLayout />
+      </PrivateRoute>
     ,
+    children: [
+      {
+        path: '/',
+        element: <Admin />
+      },
+      {
+        path: '/upload-video',
+        element: <AddSignVideos />
+      },
+      {
+        path: '/upload-practice-question',
+        element: <ManageQues />
+      }
+    ]
   },
   {
     path: "/login",
@@ -27,14 +45,18 @@ const router = createBrowserRouter([
     path: "/signup",
     element: <SignUp />,
   },
-  {
-    path: "/upload-video",
-    element: <Add_learning />,
-  },
-  {
-    path: "/upload-practice-question",
-    element: <AdminPractice />,
-  },
+  // {
+  //   path: "/upload-video",
+  //   element: <Add_learning />,
+  // },
+  // {
+  //   path: "/upload-practice-question",
+  //   element: <AdminPractice />,
+  // },
+  // {
+  //   path: "/test",
+  //   element: <VideoRecorder />,
+  // },
 ]);
 function App() {
   return (
