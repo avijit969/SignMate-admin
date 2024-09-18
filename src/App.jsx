@@ -7,12 +7,11 @@ import {
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import PrivateRoute from './components/PrivateRoute';
-
 import { Toaster } from 'react-hot-toast';
 import Admin from './pages/Admin-page';
 import MainLayout from './components/MainLayout';
-import AddSignVideos from './pages/AddSignVideos';
 import ManageQues from './pages/ManageQues';
+import ManageSignVideos from './pages/ManageSignVideos';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/upload-video',
-        element: <AddSignVideos />
+        element: <ManageSignVideos />
       },
       {
         path: '/upload-practice-question',
@@ -45,18 +44,6 @@ const router = createBrowserRouter([
     path: "/signup",
     element: <SignUp />,
   },
-  // {
-  //   path: "/upload-video",
-  //   element: <Add_learning />,
-  // },
-  // {
-  //   path: "/upload-practice-question",
-  //   element: <AdminPractice />,
-  // },
-  // {
-  //   path: "/test",
-  //   element: <VideoRecorder />,
-  // },
 ]);
 function App() {
   return (

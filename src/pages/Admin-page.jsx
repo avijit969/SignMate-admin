@@ -13,7 +13,7 @@ const Admin = () => {
     const [sortBy, setSortBy] = useState('id');
     const [sortOrder, setSortOrder] = useState('asc');
 
-    const limit = 10; // Users per page
+    const limit = 5; // Users per page
 
     useEffect(() => {
         fetchUsers();
@@ -66,8 +66,8 @@ const Admin = () => {
     };
 
     return (
-        <div className="p-6 w-[80%]">
-            <h1 className="text-2xl font-bold mb-4">Users available in signMate</h1>
+        <div className="p-6 w-[100%]">
+            <h1 className="text-2xl font-bold mb-4">Total {totalUsers} Users are available in signMate</h1>
 
             {/* Filter Input */}
             <div className="mb-4">

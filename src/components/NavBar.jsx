@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import imagePath from '../assets/images/dp.jpg';
+import imagePath from '../assets/images/avatar.png';
+import logo from '../assets/images/signmateLogo.png';
 import { CiLogout } from 'react-icons/ci';
 import Sidebar from './Sidebar';
 import { logout } from '../store/authSlice';
@@ -20,9 +21,9 @@ const Navbar = () => {
     return (
         <>
             {/* Navbar */}
-            <nav className="bg-slate-700 drop-shadow-md border-b-2 border-gray-300">
+            <nav className="bg-slate-700 drop-shadow-md border-b-2 border-gray-300 bg-white">
                 <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-1">
                         {/* Sidebar Toggle Button */}
                         <button onClick={toggleSidebar} className="text-black focus:outline-none p-2">
                             <svg
@@ -41,7 +42,7 @@ const Navbar = () => {
                             </svg>
                         </button>
                         {/* Brand Name */}
-                        <h1 className="text-black text-3xl font-bold">SignMate</h1>
+                        <img src={logo} alt="Logo" className="h-12 w-32" />
                     </div>
 
                     {/* Profile Icon */}
@@ -50,7 +51,7 @@ const Navbar = () => {
                             <img
                                 src={imagePath}
                                 alt="Profile"
-                                className="w-10 h-10 rounded-full object-cover cursor-pointer"
+                                className="w-12 h-12 rounded-full object-cover cursor-pointer border-2 border-slate-700"
                             />
                         </button>
 

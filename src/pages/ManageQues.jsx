@@ -5,6 +5,16 @@ import Modal from '../components/Model';
 import Loader from '../components/Loader';
 import { Button } from '@material-tailwind/react';
 
+/**
+ * Manage practice questions
+ *
+ * This component is used to manage practice questions. It displays a table of all practice questions
+ * and allows the user to add, edit or delete questions. When adding or editing a question, a modal is
+ * displayed for the user to input the question details. The component also handles the business logic
+ * for adding, editing and deleting questions.
+ *
+ * @return {JSX.Element} The JSX element representing the Manage practice questions component.
+ */
 function ManageQues() {
     const [questions, setQuestions] = useState([]);
     const [editingQuestionId, setEditingQuestionId] = useState(null);
@@ -251,7 +261,7 @@ function ManageQues() {
                 >Add Question</Button>
             </div>
             <div className="mb-4 rounded-2xl">
-                <table className="min-w-full bg-white border border-gray-200 rounded-2xl">
+                <table className="min-w-full bg-white border-gray-200 rounded-2xl">
                     <thead className='rounded-2xl border-b'>
                         <tr>
                             <th className="px-2 py-2 text-left">Question</th>
@@ -270,7 +280,7 @@ function ManageQues() {
                                 <td className="px-2 py-2">{question.question}</td>
                                 <td className="px-2 py-2 relative">
                                     {question.question_video_url && (
-                                        <div className="relative">
+                                        <div className="fixed">
                                             <video controls width="400" className="mt-2 rounded-xl object-cover">
                                                 <source src={question.question_video_url} type="video/mp4" />
                                                 Your browser does not support the video tag.
