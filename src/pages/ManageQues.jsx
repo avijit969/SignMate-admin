@@ -278,9 +278,9 @@ function ManageQues() {
                         {questions.map(question => (
                             <tr key={question.id} className='border-b'>
                                 <td className="px-2 py-2">{question.question}</td>
-                                <td className="px-2 py-2 relative">
+                                <td className="px-2 py-2 ">
                                     {question.question_video_url && (
-                                        <div className="fixed">
+                                        <div className="">
                                             <video controls width="400" className="mt-2 rounded-xl object-cover">
                                                 <source src={question.question_video_url} type="video/mp4" />
                                                 Your browser does not support the video tag.
